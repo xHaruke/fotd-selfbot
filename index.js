@@ -278,19 +278,18 @@ function formatArrays(selectedArray, removedArray) {
 }
 
 function formatArray(array) {
-  let num = 1; // Initialize num with the starting number or 1 if not provided
+  let num = 1;
   const formArray = (array, color) => {
     return array.map((item, index) => {
       if (index === 0) {
-        // Add "- sfsf" to the first item
         const formattedItem = `[2;37m${num}.[0m ${color}${item}[0m - [2;31m${formatDate(
           job.pendingInvocations[0].fireDate.toLocaleString(DateTime.DATETIME_MED)
         )}[0m`;
-        num++; // Increment num for the next item
+        num++;
         return formattedItem;
       } else {
         const formattedItem = `[2;37m${num}.[0m ${color}${item}[0m`;
-        num++; // Increment num for the next item
+        num++;
         return formattedItem;
       }
     });

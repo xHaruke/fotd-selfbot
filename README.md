@@ -57,6 +57,7 @@ A simple selfbot to post fact of the day on a discord server..
 
 ## Important stuff
 
+- Post `**#Fact 0** - o.` in the channel where the bot would be posting. You can delete it after the bot has made its first post.
 - This is a selfbot which is against discord's dumb rules.
 - This project was made for fun so the code isn't that good.
 - This project can run with both node and bun(yes the shit that that is 29x faster than npm).

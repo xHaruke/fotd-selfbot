@@ -2,15 +2,15 @@ import dotenv from "dotenv";
 dotenv.config();
 
 export default {
-  token: "MTExNjU3Njg1NzAxNDQxNTQwMA.GurLGF.03I53llgLuS8Kv4QGw06nY4y4rZToiWVpEdtFI" || process.env.token,
-  factCount: 10,
-  userID: "852848188942581764",
-  fotdChannel: "1165128087034413207",
-  autoCrosspost: false,
+  token: "" || process.env.token, //token of the selfbot account
+  factCount: 10, // facts to collect on start command
+  userID: "", // user id of the owner of the selfbot to whom it should accept commands from
+  fotdChannel: "", // channel id of the fotd channel
+  autoCrosspost: false, // whether the bot should auto-publish or not // only set to true on announcement channels
   timezone: "Asia/Calcutta", //https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   prefix: "!",
   warnAt: 3, //when you should get a dm about the lacking facts in the db
-  customStatus: {
+  customStatus: {      //custom status of the bot
     emoji: '',
     message: ''
   },

@@ -13,6 +13,15 @@ A simple selfbot to post fact of the day on a discord server..
 - Auto duplicate detection.
 - that's it ig..
 
+## Table on contents
+
+- [Discord FOTD selfbot](#discord-fotd-selfbot)
+  - [Features](#features)
+- [Setup](#setup)
+  - [24/7](#247)
+  - [Commands](#commands)
+  - [Important stuff](#important-stuff)
+
 # Setup
 
 [![Run on Repl.it](https://repl.it/badge/github/xharuke/fotd-selfbot)](https://repl.it/github/xHaruke/fotd-selfbot)
@@ -21,13 +30,19 @@ A simple selfbot to post fact of the day on a discord server..
 
 - Edit config.js
 
+![sectrets](https://i.imgur.com/N1bha6v.png)
+
+- Click `Secrets` > `New Secret` > Put `token` in `key` and your token in `Value` > Click `Add Secret`
+
+![di](https://i.imgur.com/RHlNHTv.png)
+
 - Click run
 
 ## 24/7
 
 - Click the run button and copy the url
 
-![24/7 Url](https://i.imgur.com/s0KrBeH.png)
+![24/7 Url](https://i.imgur.com/iCJe8GI.png)
 
 - Go to [Uptime Robot](https://uptimerobot.com/dashboard) > Click add a new monitor > Set monitor type to `HTTP(s)` > Give it a name > Enter the url in the `URL (or IP)` > Set monitoring interval to 1 minute > Click create monitor
 

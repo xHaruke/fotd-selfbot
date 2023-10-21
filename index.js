@@ -6,11 +6,20 @@ import cheerio from "cheerio";
 import fetch from "node-fetch";
 import db2 from "old-wio.db";
 import schedule from "node-schedule";
+import express from 'express'
 import { DateTime } from "luxon";
 const client = new Client({
   syncStatus: false,
   checkUpdate: false,
 });
+
+const app = express()
+
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+
+app.listen(3000)
 
 const r = new CustomStatus()
   .setState(config.customStatus.message || 'duck. fuck.')

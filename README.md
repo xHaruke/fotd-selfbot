@@ -30,10 +30,9 @@ A simple selfbot to post fact of the day on a discord server..
 
 - Edit config.js
 
-![sectrets](https://i.imgur.com/N1bha6v.png)
-
 - Click `Secrets` > `New Secret` > Put `token` in `key` and your token in `Value` > Click `Add Secret`
 
+![sectrets](https://i.imgur.com/N1bha6v.png)
 ![di](https://i.imgur.com/RHlNHTv.png)
 
 - Click run

@@ -1,0 +1,24 @@
+{
+  "name": "fotd",
+  "version": "0.0.1",
+  "description": "A bot that'll post fact of the days on any discord server.",
+  "type": "module",
+  "exports": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xharuke",
+  "license": "ISC",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "discord.js-selfbot-v13": "^2.14.11",
+    "dotenv": "^16.3.1",
+    "htmlparser2": "^9.0.0",
+    "luxon": "^3.4.3",
+    "node-fetch": "^3.3.2",
+    "node-schedule": "^2.1.1",
+    "old-wio.db": "^4.0.10",
+    "quick.db": "^9.1.7",
+    "write-file-atomic": "^5.0.1"
+  }
+}

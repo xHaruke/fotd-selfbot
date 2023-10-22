@@ -4,6 +4,7 @@ import { Client, CustomStatus } from "discord.js-selfbot-v13";
 import config from "./config.js";
 import cheerio from "cheerio";
 import fetch from "node-fetch";
+import express from 'express'
 import db2 from "old-wio.db";
 import schedule from "node-schedule";
 import { DateTime } from "luxon";
@@ -11,6 +12,14 @@ const client = new Client({
   syncStatus: false,
   checkUpdate: false,
 });
+
+const app = express()
+
+app.get('/', function (req, res) {
+  res.send('Hello World')
+})
+
+app.listen(3000)
 
 const r = new CustomStatus()
   .setState(config.customStatus.message || 'duck. fuck.')

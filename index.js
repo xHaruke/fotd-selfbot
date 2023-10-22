@@ -6,20 +6,11 @@ import cheerio from "cheerio";
 import fetch from "node-fetch";
 import db2 from "old-wio.db";
 import schedule from "node-schedule";
-import express from 'express'
 import { DateTime } from "luxon";
 const client = new Client({
   syncStatus: false,
   checkUpdate: false,
 });
-
-const app = express()
-
-app.get('/', function (req, res) {
-  res.send('Hello World')
-})
-
-app.listen(3000)
 
 const r = new CustomStatus()
   .setState(config.customStatus.message || 'duck. fuck.')
@@ -248,13 +239,15 @@ async function getUserFacts(user, channel) {
 }
 
 function getRandomTime() {
+  const today = new Date();
+  const day = today.getDate();
   const seconds = Math.floor(Math.random() * 60);
   const hours = Math.floor(
     Math.random() * (config.time.max - config.time.min + 1) + config.time.min
   );
   const minutes = Math.floor(Math.random() * 60);
 
-  return `${seconds} ${minutes} ${hours} * * *`;
+  return `${seconds} ${minutes} ${hours} ${day + 1} * *`;
 }
 
 function truncate(str, n) {
@@ -278,18 +271,19 @@ function formatArrays(selectedArray, removedArray) {
 }
 
 function formatArray(array) {
-  let num = 1;
+  let num = 1; // Initialize num with the starting number or 1 if not provided
   const formArray = (array, color) => {
     return array.map((item, index) => {
       if (index === 0) {
+        // Add "- sfsf" to the first item
         const formattedItem = `[2;37m${num}.[0m ${color}${item}[0m - [2;31m${formatDate(
           job.pendingInvocations[0].fireDate.toLocaleString(DateTime.DATETIME_MED)
         )}[0m`;
-        num++;
+        num++; // Increment num for the next item
         return formattedItem;
       } else {
         const formattedItem = `[2;37m${num}.[0m ${color}${item}[0m`;
-        num++;
+        num++; // Increment num for the next item
         return formattedItem;
       }
     });

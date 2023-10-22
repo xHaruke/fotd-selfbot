@@ -248,16 +248,15 @@ async function getUserFacts(user, channel) {
 }
 
 function getRandomTime() {
-  var tmrw = new Date();
-  tmrw.setDate(tmrw.getDate() + 1)
-  const day = tmrw.getDate();
+  const today = new Date();
+  const day = today.getDate();
   const seconds = Math.floor(Math.random() * 60);
   const hours = Math.floor(
     Math.random() * (config.time.max - config.time.min + 1) + config.time.min
   );
   const minutes = Math.floor(Math.random() * 60);
 
-  return `${seconds} ${minutes} ${hours} ${day} * *`;
+  return `${seconds} ${minutes} ${hours} ${day + 1} * *`;
 }
 
 function truncate(str, n) {

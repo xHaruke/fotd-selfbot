@@ -41,9 +41,9 @@ const job = schedule.scheduleJob(getRandomTime(), async function () {
   await postMessage();
   await job.reschedule(getRandomTime());
   console.log(
-    formatDate(
+    `🚀 | Next run at \x1b[1;93m${formatDate(
       job.pendingInvocations[0].fireDate.toLocaleString(DateTime.DATETIME_MED)
-    )
+    )}\x1b[0;39m`
   )
 });
 
